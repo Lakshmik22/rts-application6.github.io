@@ -108,9 +108,17 @@
     <main>
       <section class="card" aria-labelledby="project-desc">
         <h2 id="project-desc">Project description</h2>
-        <p class="muted">
-          The Theme Park Ride Control System is a microcontroller-based project that demonstrates automated ride sequencing, safety interlocks, and basic telemetry. The demo shows start/stop control, emergency-stop behavior, and a simulated ride cycle on Wokwi.
-        </p>
+       <p class="muted">
+    This project is a real-time system that represents a prototype roller coaster ride control system inspired by Disney attractions. The system consists of three main components: an ultrasonic distance sensor, an emergency stop push button, and multiple LEDs. These components are programmed on an ESP32 microcontroller to work together to ensure a smooth and safe ride experience.
+  </p>
+
+  <p class="muted">
+    The ultrasonic distance sensor detects if any obstacles are near the ride vehicle and, when triggered, alerts the operator by flashing a blue LED. The emergency stop push button immediately halts the ride for three seconds and activates the red LED to indicate a safety stop. Meanwhile, the green LED signals that the ride is operating safely and functioning normally.
+  </p>
+
+  <p class="muted">
+    By using FreeRTOS, the system ensures that all critical tasks meet their deadlines and operate reliably, which is essential for real-time safety-critical applications like ride control systems.
+  </p>
 
         <div style="margin-top:14px">
           <strong>Quick highlights</strong>
