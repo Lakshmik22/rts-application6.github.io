@@ -58,14 +58,6 @@
       box-shadow:0 12px 40px rgba(2,6,23,0.6);
       margin-bottom:20px;
     }
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr 360px;
-      gap:20px;
-    }
-    @media (max-width:880px){
-      .grid{grid-template-columns:1fr;}
-    }
     .card{
       background:var(--card);
       padding:14px;
@@ -76,7 +68,7 @@
     ul{margin:8px 0 0 20px;}
     .video-wrap{
       position:relative;
-      padding-bottom:56.25%; /* 16:9 */
+      padding-bottom:56.25%;
       height:0;
       overflow:hidden;
       border-radius:10px;
@@ -100,7 +92,6 @@
     }
     .btn:hover{transform:translateY(-3px);box-shadow:0 8px 26px rgba(0,0,0,0.5)}
     footer{color:var(--muted);font-size:0.9rem;margin-top:18px;text-align:center}
-    .meta-line{font-size:0.95rem;color:var(--muted);margin-bottom:8px}
     code.inline{background:rgba(255,255,255,0.03);padding:2px 6px;border-radius:6px;color:#bfe6d9}
   </style>
 </head>
@@ -115,91 +106,52 @@
     </header>
 
     <main>
-      <div class="grid">
-        <!-- Main column -->
-        <section class="card" aria-labelledby="project-desc">
-          <h2 id="project-desc">Project description</h2>
-          <p class="muted">
-            The Theme Park Ride Control System is a microcontroller-based project that demonstrates automated ride sequencing, safety interlocks, and basic telemetry. The demo shows start/stop control, emergency-stop behavior, and a simulated ride cycle on Wokwi.
+      <section class="card" aria-labelledby="project-desc">
+        <h2 id="project-desc">Project description</h2>
+        <p class="muted">
+          The Theme Park Ride Control System is a microcontroller-based project that demonstrates automated ride sequencing, safety interlocks, and basic telemetry. The demo shows start/stop control, emergency-stop behavior, and a simulated ride cycle on Wokwi.
+        </p>
+
+        <div style="margin-top:14px">
+          <strong>Quick highlights</strong>
+          <ul>
+            <li>Simulated ride control using an embedded microcontroller (Wokwi simulation).</li>
+            <li>Safety features: emergency stop, interlock checks, and status LEDs.</li>
+            <li>Demo video shows end-to-end operation including faults and recovery.</li>
+          </ul>
+        </div>
+
+        <div style="margin-top:16px">
+          <strong>Embedded demo video</strong>
+          <p class="muted" style="margin:6px 0">Watch the short YouTube demo below.</p>
+
+          <div class="video-wrap" role="region" aria-label="Project demo video">
+            <iframe
+              src="https://www.youtube.com/embed/REPLACE_WITH_YOUTUBE_ID"
+              title="Theme Park Ride Control System demo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <p class="muted" style="margin-top:8px;font-size:0.9rem">
+            If your video is private, make sure to set it to <strong>Unlisted</strong> or <strong>Public</strong> in YouTube so it will play for site visitors.
           </p>
+        </div>
 
-          <div style="margin-top:14px">
-            <strong>Quick highlights</strong>
-            <ul>
-              <li>Simulated ride control using an embedded microcontroller (Wokwi simulation).</li>
-              <li>Safety features: emergency stop, interlock checks, and status LEDs.</li>
-              <li>Demo video shows end-to-end operation including faults and recovery.</li>
-            </ul>
+        <div style="margin-top:18px">
+          <strong>Wokwi simulation</strong>
+          <p class="muted" style="margin:6px 0">Interactive simulation used during development:</p>
+          <div class="links">
+            <a class="btn" href="https://wokwi.com/projects/449247448022602753" target="_blank" rel="noopener noreferrer">Open Wokwi Project</a>
           </div>
-
-          <div style="margin-top:16px">
-            <strong>Embeded demo video</strong>
-            <p class="muted" style="margin:6px 0">Watch the short YouTube demo below.</p>
-
-            <!-- Responsive YouTube embed -->
-            <div class="video-wrap" role="region" aria-label="Project demo video">
-              <!--
-                Replace REPLACE_WITH_YOUTUBE_ID with your actual YouTube video id (the part after "v=" in the URL).
-                Example: For https://www.youtube.com/watch?v=dQw4w9WgXcQ use dQw4w9WgXcQ
-              -->
-              <iframe
-                src="https://www.youtube.com/embed/REPLACE_WITH_YOUTUBE_ID"
-                title="Theme Park Ride Control System demo"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-              </iframe>
-            </div>
-
-            <p class="muted" style="margin-top:8px;font-size:0.9rem">
-              If your video is private, make sure to set it to <strong>Unlisted</strong> or <strong>Public</strong> in YouTube so it will play for site visitors.
-            </p>
-          </div>
-
-          <div style="margin-top:18px">
-            <strong>Wokwi simulation</strong>
-            <p class="muted" style="margin:6px 0">Interactive simulation used during development:</p>
-            <div class="links">
-              <a class="btn" href="https://wokwi.com/projects/449247448022602753" target="_blank" rel="noopener noreferrer">Open Wokwi Project</a>
-            </div>
-          </div>
-        </section>
-
-        <!-- Sidebar -->
-        <aside>
-          <div class="card" aria-labelledby="learning-goals">
-            <h3 id="learning-goals">Learning Goals</h3>
-            <ul>
-              <li>Create and configure a simple GitHub Pages site.</li>
-              <li>Upload a short demo video to YouTube and embed it using HTML.</li>
-              <li>Write a clear project description for a general audience.</li>
-              <li>Share a public URL for your work (resume/portfolio-ready).</li>
-            </ul>
-            <div style="margin-top:12px" class="meta-line">What you need before you start</div>
-            <ul>
-              <li>A GitHub account (free)</li>
-              <li>A Google / YouTube account</li>
-              <li>Your Application 6 project (complete or in demo-ready state)</li>
-              <li>Comfort editing HTML files and using GitHub web UI</li>
-            </ul>
-
-            <div style="margin-top:12px" class="meta-line">Publish notes</div>
-            <p class="muted" style="margin:6px 0">
-              To publish: push this file to the repository root (or <code class="inline">docs/</code>), then enable GitHub Pages in repo settings. Replace the GitHub Pages URL below with your published URL.
-            </p>
-
-            <div style="margin-top:10px" class="links">
-              <a class="btn" href="https://your-username.github.io/application6-theme-park-ride-control-system/" target="_blank" rel="noopener noreferrer">View on GitHub Pages (replace URL)</a>
-              <a class="btn" href="https://docs.github.com/en/pages" target="_blank" rel="noopener noreferrer">GitHub Pages docs</a>
-            </div>
-          </div>
-        </aside>
-      </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-      Tip: after uploading, replace <code class="inline">REPLACE_WITH_YOUTUBE_ID</code> and the GitHub Pages URL above. Good luck — and nice work on Application 6!
+      Tip: after uploading, replace <code class="inline">REPLACE_WITH_YOUTUBE_ID</code> and add your GitHub Pages link. Good luck — and nice work on Application 6!
     </footer>
   </div>
 </body>
 </html>
-
